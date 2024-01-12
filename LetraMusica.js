@@ -21,15 +21,23 @@ Perna direita, perna esquerda`;
     this.fraseDivisao = "E atenção agora, porque";
   }
 
-  getFrazeAlternavel(animal1, animal2) {
-    return `O ${animal1}
+  getFraseAlternavel(animal1, animal2) {
+    if (animal1 !== "minhoquinha" && animal2 !== "sapinho") {
+      return `O ${animal1}
 E os ${animal2}, como os filhos do Senhor`;
+    } else if (animal1 === "minhoquinha") {
+      return `A ${animal1}
+E os ${animal2}, como os filhos do Senhor`;
+    } else {
+      return `O ${animal1}
+E o ${animal2}, como os filhos do Senhor`;
+    }
   }
 
   getOsAnimaizinhosCompleto(animal1, animal2) {
     return `${this.osAnimaizinhos}${
       this.pularLinhaUmaVez
-    }${this.getFrazeAlternavel(animal1, animal2)}`;
+    }${this.getFraseAlternavel(animal1, animal2)}`;
   }
 
   getParte1() {
