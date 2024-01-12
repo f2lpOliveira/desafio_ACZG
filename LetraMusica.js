@@ -82,12 +82,14 @@ Dá um pulinho e abraça o irmão`;
 ${this.getParte2()}`;
   }
 
+  // Esse método divide a música em duas partes, sendo o ponto de divisão a frase "E atenção agora, porque".
   dividirMusica() {
     const musicaCompleta = this.getMusicaInteira();
-    const indexDivisao = musicaCompleta.indexOf(this.fraseDivisao);
+    const indexDivisao = musicaCompleta.indexOf(this.fraseDivisao); // O método aqui está sendo utilizado para encontrar a ocorrência da frase utilizada como ponto de divisão.
 
+    // Aqui é verificado se o ponto de divisão foi encontrado.
     if (indexDivisao !== -1) {
-      const parte1 = musicaCompleta.substring(0, indexDivisao);
+      const parte1 = musicaCompleta.substring(0, indexDivisao); // Esse método está sendo utilizado para extrair parte da string.
       const parte2 = musicaCompleta.substring(
         indexDivisao + this.fraseDivisao.length
       );
